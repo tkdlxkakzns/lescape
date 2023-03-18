@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>레스케이프 호텔</title>
+  <!-- 1. CSS 초기화 -->
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <!-- 2. 공통 서식 -->
+  <link rel="stylesheet" href="./css/base.css" type="text/css">
+  <!-- 3. 레이아웃 서식 -->
+  <link rel="stylesheet" href="./css/layout.css" type="text/css">
+  <!-- 4. PC 화면 서식 -->
+  <link rel="stylesheet" href="./css/pc.css" type="text/css">
+  <!-- 5. TABLET 화면 서식 -->
+  <link rel="stylesheet" href="./css/tablet.css" type="text/css">
+  <!-- 5. MOBILE 화면 서식 -->
+  <link rel="stylesheet" href="./css/mobile.css" type="text/css">
+</head>
+
+<body>
+  <!-- 헤더 영역 시작 -->
+  <header>
+    <div id="header">
+      <div class="hd top">
+        <span class="a_l"><a href="#" title="메뉴 토글">
+          <img src="./svg/icon_menu.svg" alt="햄버거 메뉴"></a>
+        </span>
+        <span class="a_r"><a href="#" title="로그인하기">
+          <img src="./svg/icon_login.svg" alt="로그인 아이콘"></a>
+        </span>
+        <p class="a_l">welcome to</p>
+        <nav class="a_r">
+          <ul>
+            <li><a href="#" title="로그인">login</a></li>
+            <li><a href="#" title="회원 가입">join</a></li>
+            <li><a href="#" title="예약 확인">my bookings</a></li>
+          </ul>
+        </nav>
+        <h1>
+          <a href="index.html" title="메인 페이지 바로가기">
+            <img class="a_c" src="./svg/header_logo.svg" alt="상단 로고">
+            <img class="a_c" src="./svg/header_logo_txt.svg" alt="상단 로고">
+          </a>
+        </h1>
+      </div>
+      <div class="hd bot">
+        <nav class="a_l">
+          <ul>
+            <li><a href="#" title="소개">about us</a></li>
+            <li><a href="#" title="룸 더보기">rooms</a></li>
+            <li><a href="#" title="레스토랑, 바">dining</a></li>
+            <li><a href="#" title="오퍼 확인">offers</a></li>
+            <li><a href="#" title="기타 정보">info</a></li>
+          </ul>
+        </nav>
+        <div id="search" class="a_r">
+          <input type="text" placeholder="Search here">
+          <button>Search</button>
+        </div>
+      </div>
+    </div>
+    <div id="hd_line"></div>
+  </header>
+  
+  <!-- 메인 영역 시작 -->
+  <main>
+    <input type="checkbox" id="book">
+    <article class="lobby res_img">
+      <div>
+        <h5>메인 로비 이미지</h5>
+        <img src="./images/main_lobby_p.jpg" alt="메인 로비 이미지">
+        <img src="./images/main_lobby_t.jpg" alt="메인 로비 이미지">
+      </div>
+    </article>
+    
+    <div id="booking">
+      <a href="#" title="예약하기">
+        <img src="./svg/booking.svg" alt="예약하기">
+        <span></span>
+      </a>
+      <!-- 모바일 BOOK -->
+      <div class="calendar">
+        <label for="book">
+          <ul class="flex toggletext">
+            <li>b</li>
+            <li>o</li>
+            <li>o</li>
+            <li>k</li>
+          </ul>
+        </label>
+        <!-- 캘린더 -->
+        <table class="calendar_table">
+          <caption>예약 하기</caption>
+          <tr>
+            <td class="calendar_close_td"><label for="book">
+              <span class="calendar_close"></span>
+              <span class="calendar_close"></span>
+            </label></td>
+          </tr>
+          <!-- CALENDAR_YEAR -->
+          <tr class="calendar_year_tr">
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+            <th><span class="calendar_year">2021</span></th>
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+          </tr>
+          <!-- CALENDAR_MONTH -->
+          <tr class="calendar_month_tr">
+            <td><img src="./svg/bracket_left.svg" alt="이전 달 확인"></td>
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+            <th><span class="calendar_month">october</span></th>
+            <td class="empty">empty</td>
+            <td class="empty">empty</td>
+            <td><img src="./svg/bracket_right.svg" alt="다음 달 확인"></td>
+          </tr>
+          <!-- CALENDAR_DATE -->
+          <tr>
+            <th class="calendar_date">mon</th>
+            <th class="calendar_date">tue</th>
+            <th class="calendar_date">wed</th>
+            <th class="calendar_date">thu</th>
+            <th class="calendar_date">fri</th>
+            <th class="calendar_date">sat</th>
+            <th class="calendar_date">sun</th>
+            <td class="empty calendar_date">empty</td>
+            <td class="empty calendar_date">empty</td>
+            <td class="empty calendar_date">empty</td>
+            <td class="empty calendar_date">empty</td>
+            <td class="calendar_date day_first">1</td>
+            <td class="calendar_date">2</td>
+            <td class="calendar_date">3</td>
+            <td class="calendar_date">4</td>
+            <td class="calendar_date">5</td>
+            <td class="calendar_date">6</td>
+            <td class="calendar_date">7</td>
+            <td class="calendar_date">8</td>
+            <td class="calendar_date">9</td>
+            <td class="calendar_date">10</td>
+            <td class="calendar_date">11</td>
+            <td class="calendar_date">12</td>
+            <td class="calendar_date">13</td>
+            <td class="calendar_date">14</td>
+            <td class="calendar_date">15</td>
+            <td class="calendar_date">16</td>
+            <td class="calendar_date">17</td>
+            <td class="calendar_date today">18</td>
+            <td class="calendar_date">19</td>
+            <td class="calendar_date">20</td>
+            <td class="calendar_date">21</td>
+            <td class="calendar_date">22</td>
+            <td class="calendar_date">23</td>
+            <td class="calendar_date">24</td>
+            <td class="calendar_date">25</td>
+            <td class="calendar_date">26</td>
+            <td class="calendar_date">27</td>
+            <td class="calendar_date">28</td>
+            <td class="calendar_date">29</td>
+            <td class="calendar_date">30</td>
+            <td class="calendar_date">31</td>
+          </tr>
+          <tr class="calendar_line">
+            <th class="calendar_subtitle">check in / out</th>
+          </tr>
+          <tr>
+            <td class="check_day">
+              <p class="check_align">
+                <span class="check_date">2021년 10월</span>
+                18일</p>
+            </td>
+            <td>
+              <div class="check_arrow_container">
+                <span class="arrow_line"></span>
+                <span class="arrow_right"></span>
+              </div>
+            </td>
+            <td class="check_day">
+              <p class="check_align">
+                <span class="check_date">2021년 10월</span>
+                19일</p>
+            </td>
+          </tr>
+          <tr class="calendar_line">
+            <th class="calendar_subtitle">room & guest</th>
+          </tr>
+          <!-- 룸 앤 게스트 라디오 버튼 -->
+          <tr class="check-guest">
+            <td>객실</td>
+            <td>성인</td>
+            <td>소아</td>
+          </tr>
+          <tr class="calendar_radio">
+            <td>
+              <div class="radio_container radio_count_left">
+                <input type="radio" id="count_left_00" name="count_left">
+                <input type="radio" id="count_left_01" name="count_left">
+                <input type="radio" id="count_left_02" name="count_left">
+                <input type="radio" id="count_left_03" name="count_left">
+                <input type="radio" id="count_left_04" name="count_left">
+                <input type="radio" id="count_left_05" name="count_left">
+
+                <div class="count_box left_button00">
+                  <p class="disabled_box">-</p>
+                  <p class="count_number">0</p>
+                  <label for="count_left_01">+</label>
+                </div>
+                <div class="count_box left_button01">
+                  <label for="count_left_00">-</label>
+                  <p class="count_number">1</p>
+                  <label for="count_left_02">+</label>
+                </div>
+                <div class="count_box left_button02">
+                  <label for="count_left_01">-</label>
+                  <p class="count_number">2</p>
+                  <label for="count_left_03">+</label>
+                </div>
+                <div class="count_box left_button03">
+                  <label for="count_left_02">-</label>
+                  <p class="count_number">3</p>
+                  <label for="count_left_04">+</label>
+                </div>
+                <div class="count_box left_button04">
+                  <label for="count_left_03">-</label>
+                  <p class="count_number">4</p>
+                  <label for="count_left_05">+</label>
+                </div>
+                <div class="count_box left_button05">
+                  <label for="count_left_04">-</label>
+                  <p class="count_number">5</p>
+                  <p class="disabled_box">+</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="radio_container radio_count_center">
+                <input type="radio" id="count_center_00" name="count_center">
+                <input type="radio" id="count_center_01" name="count_center">
+                <input type="radio" id="count_center_02" name="count_center">
+                <input type="radio" id="count_center_03" name="count_center">
+                <input type="radio" id="count_center_04" name="count_center">
+                <input type="radio" id="count_center_05" name="count_center">
+
+                <div class="count_box center_button00">
+                  <p class="disabled_box">-</p>
+                  <p class="count_number">0</p>
+                  <label for="count_center_01">+</label>
+                </div>
+                <div class="count_box center_button01">
+                  <label for="count_center_00">-</label>
+                  <p class="count_number">1</p>
+                  <label for="count_center_02">+</label>
+                </div>
+                <div class="count_box center_button02">
+                  <label for="count_center_01">-</label>
+                  <p class="count_number">2</p>
+                  <label for="count_center_03">+</label>
+                </div>
+                <div class="count_box center_button03">
+                  <label for="count_center_02">-</label>
+                  <p class="count_number">3</p>
+                  <label for="count_center_04">+</label>
+                </div>
+                <div class="count_box center_button04">
+                  <label for="count_center_03">-</label>
+                  <p class="count_number">4</p>
+                  <label for="count_center_05">+</label>
+                </div>
+                <div class="count_box center_button05">
+                  <label for="count_center_04">-</label>
+                  <p class="count_number">5</p>
+                  <p class="disabled_box">+</p>
+                </div>
+              </div>
+            </td>
+            <td>
+              <div class="radio_container radio_count_right">
+                <input type="radio" id="count_right_00" name="count_right">
+                <input type="radio" id="count_right_01" name="count_right">
+                <input type="radio" id="count_right_02" name="count_right">
+                <input type="radio" id="count_right_03" name="count_right">
+                <input type="radio" id="count_right_04" name="count_right">
+                <input type="radio" id="count_right_05" name="count_right">
+
+                <div class="count_box right_button00">
+                  <p class="disabled_box">-</p>
+                  <p class="count_number">0</p>
+                  <label for="count_right_01">+</label>
+                </div>
+                <div class="count_box right_button01">
+                  <label for="count_right_00">-</label>
+                  <p class="count_number">1</p>
+                  <label for="count_right_02">+</label>
+                </div>
+                <div class="count_box right_button02">
+                  <label for="count_right_01">-</label>
+                  <p class="count_number">2</p>
+                  <label for="count_right_03">+</label>
+                </div>
+                <div class="count_box right_button03">
+                  <label for="count_right_02">-</label>
+                  <p class="count_number">3</p>
+                  <label for="count_right_04">+</label>
+                </div>
+                <div class="count_box right_button04">
+                  <label for="count_right_03">-</label>
+                  <p class="count_number">4</p>
+                  <label for="count_right_05">+</label>
+                </div>
+                <div class="count_box right_button05">
+                  <label for="count_right_04">-</label>
+                  <p class="count_number">5</p>
+                  <p class="disabled_box">+</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr class="calendar_line">
+            <th class="calendar_subtitle">promotion code</th>
+          </tr>
+          <!-- 프로모션 코드 입력 칸 -->
+          <tr>
+            <td class="promotion">
+              <div class="promotion-container">
+                <input type="text" id="promotion" name="promotion" placeholder="type promotion code">
+                <span class="promotion-button">apply</span>
+              </div>
+            </td>
+          </tr>
+          <tr class="calendar_line">
+            <td class="calendar_subtitle">
+              <div class="availability a_c">
+                <span class="a_c">check availability</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+
+    <article id="main_escape">
+      <img class="a_r" src="./images/main_mouse.png" alt="마우스">
+      <h2 class="poor">A Parisian Escape<br> in the Heart of Seoul</h2>
+    </article>
+    
+    <div id="main_bg">
+      <section id="main_rooms">
+        <em class="gold">rooms</em>
+        <h2 class="poor">atelier suite</h2>
+        <p>우아한 인테리어에 안락함을 더한 l'escape의 시그니처 객실로<br>
+          섬세한 자수, 벽지와 미러 폴딩도어가 특징인<br class="br-mobile"> 아틀리에 스위트 객실</p>
+          <p class="p01"><span class="gold">room size</span> 53m&#178;</p>
+          <p class="p01"><span class="gold">bed type</span> king / twin</p>
+          <div class="tablet_img">
+            <img src="./images/rooms_01.png" alt="룸 사진">
+          </div>
+        <p class="notice">상기 이미지는 참고용으로 실제 배정 객실과 색상, 구조 일부가 상이할 수 있습니다.</p>
+        <article class="details">
+          <h5>rooms details</h5>
+          <ul>
+            <li>
+              <img src="./images/rooms_02.png" alt="룸 상세1">
+              <em>Finely Embroidered Wall Coverings</em>
+              <p>레스케이프 호텔의 객실은 시그니처 컬러와<br>섬세한 패턴 텍스타일로 완성되었습니다.</p>
+            </li>
+            <li>
+              <img src="./images/rooms_03.png" alt="룸 상세2">
+              <em>Belle Époque</em>
+              <p>엄선된 가구와 인테리어의 섬세함이 벨 에포크<br>스타일을 한층 돋보이게 합니다.</p>
+            </li>
+          </ul>
+        </article>
+        <article class="service">
+          <h3 class="poor gold">suite room only service</h3>
+          <p>스위트룸 투숙객을 위한 특별한<br>혜택을 누려보세요.</p>
+          <ul>
+            <li>
+              <em>breakfast service</em>
+              <p>2인 조식<br>라망시크레</p>
+            </li>
+            <li>
+              <em>savory lounge</em>
+              <p>2인 플래터 &<br>칵테일, 스파클링 와인</p>
+            </li>
+            <li>
+              <em>valet parking</em>
+              <p>발렛파킹 서비스 1박 당 1회<br>10AM ~ 10PM</p>
+            </li>
+            <li>
+              <em>ironing service</em>
+              <p>셔츠류 3벌 무료 다림질<br>10AM ~ 5PM</p>
+            </li>
+            <li>
+              <em>mini bar drinks</em>
+              <p>프리미엄 캔 와인 3종 및<br>소프트드링크 2종</p>
+            </li>
+          </ul>
+        </article>
+        <article class="slide">
+          <h5>room slide</h5>
+          <div class="res_img tablet_img">
+            <div>
+              <img src="./images/rooms_04.png" alt="룸 슬라이드">
+            </div>
+          </div>
+          <ul>
+            <li>
+              <a href="#" title="왼쪽"><img src="./svg/bracket_left.svg" alt="left"></a></li>
+            <li>
+              <a href="#" title="circle_f"><img src="./svg/circle_filled.svg" alt="circle_f"></a>
+            </li>
+            <li>
+              <a href="#" title="circle_e"><img src="./svg/circle_empty.svg" alt="circle_e"></a>
+            </li>
+            <li>
+              <a href="#" title="circle_e"><img src="./svg/circle_empty.svg" alt="circle_e"></a>
+            </li>
+            <li>
+              <a href="#" title="circle_e"><img src="./svg/circle_empty.svg" alt="circle_e"></a>
+            </li>
+            <li>
+              <a href="#" title="circle_e"><img src="./svg/circle_empty.svg" alt="circle_e"></a>
+            </li>
+            <li>
+              <a href="#" title="circle_e"><img src="./svg/circle_empty.svg" alt="circle_e"></a>
+            </li>
+            <li>
+              <a href="#" title="오른쪽"><img src="./svg/bracket_right.svg" alt="right"></a>
+            </li>
+          </ul>
+          <a href="#" title="룸 더보기" class="gold">more rooms</a>
+        </article>
+      </section>
+    </div>
+
+    <section id="main_dining">
+      <em class="gold">restaurants</em>
+      <h3 class="poor"><span>executive chef</span><br>song jongwon</h3>
+      <div class="tablet_img">
+        <img src="./images/lamant_01.png" alt="쉐프 사진">
+      </div>
+      <p>컨템포러리 레스토랑 '라망 시크레'를 이끄는 손종원 셰프는 ‘benu’, ‘Quince’ 등<br class="br-pc">
+        유수의 미쉐린 스타 레스토랑에서 쌓은 경험을 토대로 로컬 식재료를 활용한<br class="br-pc">
+        창의적인 서울 퀴진을 선보이며 ‘특별한 미식의 경험’을 선사합니다.</p>
+        
+      <article class="lamant">
+        <h3 class="poor">l’amant secret</h3>
+        <div class="res_img tablet_img">
+          <div>
+            <img src="./images/lamant_02.png" alt="라망 사진">
+          </div>
+        </div>
+        <ul>
+          <li><span class="gold">문의 및 예약</span> 02.317.4003</li>
+          <li><a href="#" title="메뉴 보기" class="gold">all menu</a></li>
+          <li><p>* 2021 미쉐린 1스타 레스토랑</p></li>
+        </ul>
+      </article>
+
+      <article class="details">
+        <h5>lamant details</h5>
+        <ul>
+          <li>
+            <img src="./images/lamant_03.png" alt="라망 상세1">
+            <em>a top-flight wine selection</em>
+            <p>최고의 소믈리에팀이 제안하는 와인 셀렉션</p>
+          </li>
+          <li>
+            <img src="./images/lamant_04.png" alt="라망 상세2">
+            <em>local street food</em>
+            <p>라망 시크레가 재해석한 명동의 스트리트 푸드</p>
+          </li>
+        </ul>
+      </article>
+    </section>
+  </main>
+  
+  <!-- 푸터 영역 시작 -->
+  <footer>
+    <div class="footer go_top">
+      <a href="#"><img src="./svg/top.svg" alt="상단 바로가기"></a>
+    </div>
+    <div class="footer top">
+      <a href="#"><img src="./images/footer_logo.png" alt="푸터 로고"></a>
+      <div class="center">
+        <ul>
+          <li><a href="#">customer center</a></li>
+          <li><a href="#">개인정보처리방침</a></li>
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">이메일무단수집금지</a></li>
+        </ul>
+      </div>
+      <div class="right">
+        <label for="fm_site">&#9660;</label>
+        <select name="fm_site" id="fm_site" onchange="if(this.value) window.open(this.value)">
+          <option value="" disabled selected>family site</option>
+          <option value="https://josunhotel.com/intro.do">josun hotels & resorts</option>
+        </select>
+        <!-- 위 아래 구분 -->
+        <div class="sns">
+          <a href="https://www.instagram.com/lescape_hotel/" title="인스타" target="blank">
+            <img src="./svg/insta_normal.svg" alt="insta_01">
+            <img src="./svg/insta_hover.svg" alt="insta_02">
+          </a>
+          <a href="https://www.facebook.com/lescapehotel/" title="페이스북" target="blank">
+            <img src="./svg/facebook_normal.svg" alt="facebook_01">
+            <img src="./svg/facebook_hover.svg" alt="facebook_02">
+          </a>
+          <a href="https://www.pinterest.co.kr/lescape_hotel/_created/" title="핀터" target="blank">
+            <img src="./svg/pinter_normal.svg" alt="pinter_01">
+            <img src="./svg/pinter_hover.svg" alt="pinter_02">
+          </a>
+          <a href="https://www.tripadvisor.co.kr/Hotel_Review-g294197-d15068651-Reviews-L_Escape_Hotel-Seoul.html" title="트립" target="blank">
+            <img src="./svg/tripad_normal.svg" alt="tripad_01">
+            <img src="./svg/tripad_hover.svg" alt="tripad_02">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer bot clear">
+      <ul>
+        <li><address>서울특별시 중구 퇴계로 00 (우)000000</address></li>
+        <li>tel 00-000-0000</li>
+      </ul>
+      <ul>
+        <li>사업자등록번호 : 000-00-00000</li>
+        <li>통신판매신고번호 : 중구 0000호</li>
+        <li>대표이사 : 한채양</li>
+      </ul>
+      <p>&#169; 0000 l’escape hotel co. all rights reserved.</p>
+    </div>
+  </footer>
+  
+</body>
+
+</html>

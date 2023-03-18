@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+/* 웹포트 - 사용자의 컴퓨터에 글꼴이 없어도 인터넷 상에서 연결하여 폰트를 적용하는 방법 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+@font-face {
+  font-family: "Circular Std Book"; src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot"); src: url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.woff") format("woff"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/860c3ec7bbc5da3e97233ccecafe512e.svg#Circular Std Book") format("svg"); }
+
+@font-face {
+  font-family: "Circular Std Medium"; src: url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.eot"); src: url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.woff") format("woff"), url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/9475d6a0b79c164f9f605673714e75d9.svg#Circular Std Medium") format("svg"); }
+
+@font-face {
+  font-family: "Circular Std Bold"; src: url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.eot"); src: url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.woff") format("woff"), url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/961a181da27e7cbc072ec2fb5bbfe2a9.svg#Circular Std Bold") format("svg"); }
+
+@font-face {
+  font-family: "Poor Richard"; src: url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.eot"); src: url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.woff") format("woff"), url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/1333b13c4f911f3160f1c2822573f70c.svg#Poor Richard") format("svg"); }
+
+/* 기본 공통 서식 - 글자 모양, 색상, 크기, 링크 */
+html{
+  text-transform: capitalize;
+  font-family: 'Noto Sans KR';
+  font-size: 20px;
+  color: #1c1c1c;
+  background-color: #ffffff;
+}
+/* -- semantic */
+header{
+  font-family: 'Circular Std Book';
+  font-size: 16px;
+}
+/* -- class */
+.gold{
+  color:#B69C58;
+}
+.poor{
+  font-size: 60px;
+  font-family: 'Poor Richard';
+}
+.notice{
+  font-size:16px;
+}
+/* -- tag */
+h2{
+  text-align: center;
+}
+h5{
+  display: none;
+}
+a{
+  color: #1c1c1c;
+  text-decoration: none;
+}
+em{
+  text-align: left;
+  font-size: 24px;
+  display:block;
+  font-weight: bold;
+}
+.br-mobile{
+  display: none;
+}
+/* ▽----▽ 공통 서식 ▽----▽ */
+/* △----△ 공통 서식 △----△ */

@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+/*
+
+　■■■　[　 SEMANTIC 　]　■■■　
+　■■■　[　 END 　]　■■■　
+　●●　[　 CONTAINER 　]　●●　
+　○　[　 CONTENT 　]　○　
+　[　 COMMON 　]　
+　　<< CHILD >>　　
+
+　　【 Undefined 】　　
+　　〔 Undefined 〕　　
+
+*/
+
+/* 〓〓〓[ ■ CLASS ■ ]〓〓〓 */
+/* [　 공통 　] */
+.clear{
+  clear: both;
+}
+.flex{
+  display: flex;
+  justify-content:space-evenly;
+}
+/* 〓[  ○  오브젝트 정렬  ○  ]〓 */
+.a_l{
+  top: 50%; left: 0;
+  transform: translateY(-50%);
+  position: absolute;
+} 
+.a_c{
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%; left: 50%;
+}
+.a_r{
+  top: 50%; right: 0;
+  transform: translateY(-50%);
+  position: absolute;
+}
+/* -- 이미지 중앙 */
+.res_img{
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.res_img > div{
+  left: -100%; right: -100%;
+  position: absolute;
+}
+.res_img > div > img{
+  margin: 0 auto;
+}
+/* 〓〓〓[  ■  END  ■  ]〓〓〓 */
+
+/* -- tag */
+div, section, article{
+  margin: 0 auto;
+}
+h1 img{
+  width: 168px;
+}
+h1 img:nth-of-type(2){
+  display: none;
+}
+/* --[  ■  공통 레이아웃 시작  ■  ]-- */
+
+/*  ●  가로 스크롤 제거  ●  */
+html{
+  overflow-x: hidden;
+}
+/* -- 모바일 아이콘 */
+header .top > span img{
+  width: 40px;
+  display: none;
+}
+/* -- 예약 버튼 */
+input[type="checkbox"], caption{
+  display: none;
+}
+label{
+  position: absolute;
+  width: 100%;
+}
+/* --[  ■  공통 레이아웃 끝  ■  ]-- */
+
+@media screen and (min-width:768px) {
+  .calendar{
+    display: none;
+  }
+}

@@ -1,0 +1,575 @@
+@charset "UTF-8";
+
+/* ▽----▽ 입력 ▽----▽ */
+/* △----△ 입력 △----△ */
+
+/* ■ ■ ■ PC 화면 서식 ■ ■ ■ */
+@media screen and (min-width:1440px) {
+
+/* ▽------------▽ 헤더 영역 시작 ▽------------▽ */
+/* -- 헤더 라인 */
+#hd_line::after{
+  content: "";
+  top: 59.5px;
+  display: block;
+  position: absolute;
+  width: 100%; height:1px;
+  background-color: #aaaaaa;
+}
+/* -- 헤더 공통 */
+header .hd{
+  max-width: 1440px;
+  position: relative;
+}
+header .hd > nav > ul > li{
+  position: relative;
+  display: inline-block;
+}
+header .hd > nav > ul > li > a{
+  text-align: center;
+  transition: 0.3s;
+}
+header .hd > nav > ul > li > a:hover{
+  color:#ffffff;
+  transition: 0.1s;
+}
+header .hd > nav > ul > li > a::after{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 0; height: 0;
+  top: 50%; left: 50%;
+  transform:translate(-50%, -51%);
+  box-sizing: border-box;
+  background-color: #1c1c1c;
+  transition: all 0.4s;
+}
+header .hd > nav > ul > li > a:hover::after{
+  border-radius: 20px;
+  width: 100%; height: 100%;
+  box-sizing: content-box;
+  padding: 3px 10px;
+  transition: 0.2s;
+}
+/* ▽----▽ 헤더 상단 ▽----▽ */
+/* -- 공통 */
+header .top{
+  height: 60px;
+}
+/* -- 로그인 */
+header .top > nav > ul > li{
+  margin-left: 24px;
+}
+header .top > nav > ul > li:not(:last-child) > a:hover::after{
+  padding: 3px 9px;
+}
+/* △----△ 헤더 상단 △----△ */
+                                        
+/* ▽----▽ 헤더 하단 ▽----▽ */
+/* -- 공통 */
+header .bot{
+  height: 30px;
+}
+/* -- GNB */
+header .bot > nav > ul > li{
+  margin-right: 24px;
+}
+header .bot > nav > ul > li > a:hover::after{
+  padding: 3px 8px;
+  border-radius: 14px;
+}
+/* -- 검색창 */
+#search{
+  width: 254px; height: 30px;
+  letter-spacing: 1px;
+}
+input{
+  border-top:  1px solid #aaaaaa;
+  border-right: 0;
+  border-bottom:  1px solid #aaaaaa;
+  border-left: 1px solid #aaaaaa;
+  margin-top: 4px;
+  padding-top: 1px;
+  width: 201px; height: 18px;
+  float: left;
+  outline: none;
+  text-indent: 4px;
+}
+input::placeholder{
+  text-indent: 8px;
+  font-family:'Roboto';
+  color:#cccccc;
+}
+button{
+  font-family: 'Roboto';
+  border:1px solid #aaaaaa;
+  background-color: #aaaaaa;
+  color: #fff;
+  font-size: 12px;
+  float: right;
+  margin-top: 4px;
+  width: 48px; height: 22px;
+  transition: 0.2s;
+}
+button:hover{
+  background-color: #fff;
+  color: #aaaaaa;
+}
+button:active{
+  transition: 0s;
+  font-weight: bold;
+  color: #8d8d8d;
+}
+/* △----△ 헤더 하단 △----△ */
+/* △------------△ 헤더 영역 끝 △------------△ */
+                                        
+                                        
+                                        
+/* ▽------------▽ 메인 영역 시작 ▽------------▽ */
+/* -- 메인 공통 */
+main{
+  text-align: center;
+}
+main p{
+  color:#707070;
+}
+main ul{
+  display:flex;
+}
+/* -- LOBBY */
+.lobby{
+  height: 695px;
+}
+.lobby img:nth-of-type(2){
+  display: none;
+}
+/* -- BOOKING */
+#booking > a{
+  z-index: 10;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow:0px 3px 5px #acacac;
+  width: 64px; height: 60px;
+  bottom: 45px; left: 50px;
+  position: fixed;
+  transition: 0.2s;
+}
+#booking > a:hover{
+  width: 200px;
+  transition: 0.5s;
+}
+#booking > a > span{
+  display: block;
+  position: absolute;
+  top: 0;
+}
+#booking > a > span::before{
+  padding-top: 8px;
+  display:block;
+  content: "book";
+  color: #fff;
+  margin: 11px 10px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  width:0%; height: 40px;
+  transition: 0.2s;
+  opacity: 0;
+}
+#booking > a:hover > span::before{
+  color: #b69c58;
+  border: 2px solid #b69c58;
+  width: 180px;
+  transition: 0.5s;
+  opacity: 1;
+}
+#booking > a > img{
+  margin-top: 7px;
+  width: 44px;
+  transition: 0.2s;
+}
+#booking > a:hover > img{
+  opacity: 0;
+  transition: 0.3s;
+}
+/* -- ESCAPE */
+#main_escape{
+  position: relative;
+  width: 94%;
+  max-width: 1440px;
+}
+#main_escape > h2{
+  padding: 36px 0 44px;
+  text-transform: none;
+  line-height: 1.2em;
+  font-size: 60px;
+  letter-spacing: 4px;
+}
+#main_escape > h2 > br{
+  display: none;
+}
+/* ▽----▽ ROOMS ▽----▽ */
+/* -- 배경 */
+#main_bg{
+  background-image: url(../images/main_bg.png);
+  padding-top: 10%;
+  padding-bottom: 40px;
+}
+/* -- 공통 */
+#main_rooms{
+  width: 1440px;
+  position: relative;
+}
+#main_rooms > em{
+  margin-bottom: 80px;
+}
+#main_rooms > h2{
+  margin-bottom: 40px;
+}
+#main_rooms > p{
+  line-height: 32px;
+}
+/* -- 룸 사이즈, 배드 타입 */
+#main_rooms .p01{
+  display: inline-block;
+  color: #1c1c1c;
+  padding: 36px 20px 40px;
+}
+/* -- 참고용 이미지*/
+#main_rooms > .res_img{
+  height:720px;
+}
+#main_rooms > .notice{
+  text-align: right; line-height: 48px;
+}
+/* -- 룸 디테일 */
+#main_rooms > .details em{
+  font-size: 20px;
+  line-height: 36px;
+  padding: 8px 0;
+}
+#main_rooms > .details p{
+  font-size:18px;
+}
+#main_rooms > .details > ul{
+  width: 872px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+#main_rooms > .details > ul > li{
+  margin: 80px 0;
+  line-height: 28px;
+  text-align:left;
+}
+/* -- 서비스 */
+#main_rooms > .service > h3{
+  font-size:32px;
+  font-weight: bold;
+  margin-bottom:40px;
+}
+#main_rooms > .service > p{
+  line-height: 28px;
+}
+#main_rooms > .service > ul{
+  margin: 60px auto;
+  width:1126px;
+  justify-content:space-between;
+}
+#main_rooms > .service > ul > li > em{
+  text-align: center;
+  font-size:22px;
+  margin-bottom: 32px;
+}
+#main_rooms > .service > ul > li > p{
+  font-size:16px;
+  line-height: 22px;
+}
+/* -- 룸 슬라이드 */
+#main_rooms > .slide > .res_img{
+  height: 765px;
+}
+#main_rooms > .slide > .res_img img{
+  max-width: 1024px;
+}
+#main_rooms > .slide > ul{
+  margin: 20px auto;
+  width: 260px;
+  align-items: center;
+  justify-content: space-between;
+}
+#main_rooms > .slide > ul > li > a > img{
+  width: 20px;
+}
+#main_rooms > .slide > a{
+  transition: 0.3s;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  margin: 40px 208px 40px auto;
+  width:fit-content;
+  padding: 10px 40px;
+  display: block;
+  border: 2px solid #b69c58;
+}
+#main_rooms > .slide > a:hover{
+  color: #fff;
+  background-color: #b69c58;
+  box-sizing: border-box;
+  margin: 40px 208px 40px auto;
+  width:fit-content;
+  padding: 10px 40px;
+  display: block;
+  border: 2px solid #b69c58;
+}
+/* △----△ ROOMS △----△ */
+                                        
+/* ▽----▽ LAMANT ▽----▽ */
+/* -- 공통 */
+#main_dining{
+  padding-bottom: 120px;
+  padding-top: 80px;
+  width: 1440px;
+}
+#main_dining > em{
+  margin-bottom: 40px;
+}
+#main_dining > h3{
+  line-height: 60px;
+  margin-bottom: 60px;
+}
+/* -- 쉐프 */
+#main_dining > h3 > span{
+  color: #707070;
+  font-size: 40px;
+}
+#main_dining > img{
+  margin-bottom: 24px;
+}
+#main_dining > p{
+  margin-bottom: 60px;
+  line-height: 36px;
+}
+/* -- 식당 */
+#main_dining > .lamant h3{
+  margin-bottom: 40px;
+}
+#main_dining > .lamant .res_img{
+  height: 720px;
+  margin-bottom: 24px;
+}
+#main_dining > .lamant ul{
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 1024px;
+}
+#main_dining > .lamant ul > li > a{
+  transition: 0.3s;
+  border: 2px solid #b69c58;
+  padding: 8px 45px;
+  box-sizing: border-box;
+  display: block;
+}
+#main_dining > .lamant ul > li > a:hover{
+  color: #fff;
+  background-color: #b69c58;
+  border: 2px solid #b69c58;
+  padding: 8px 45px;
+  box-sizing: border-box;
+  display: block;
+}
+#main_dining > .lamant ul > li > p{
+  font-size: 16px;
+}
+/* -- 식당 디테일 */
+#main_dining > .details em{
+  font-size:20px;
+  line-height: 36px;
+  padding: 8px 0;
+}
+#main_dining > .details p{
+  font-size:18px;
+}
+#main_dining > .details > ul{
+  margin: 0 auto;
+  width: 872px;
+  justify-content: space-between;
+}
+#main_dining > .details > ul > li{
+  margin: 80px 0;
+  line-height: 28px;
+  text-align:left;
+}
+/* △----△ LAMANT △----△ */
+/* △------------△ 메인 영역 끝 △------------△ */
+                                        
+                                        
+/* ▽------------▽ 푸터 영역 시작 ▽------------▽ */
+/* -- 공통 */
+footer{
+  padding: 60px 0px 40px;
+  font-size: 12px;
+  color: #707070;
+  background-color:#1c1c1c;
+}
+
+footer p, address{
+  line-height: 32px;
+}
+footer a{
+  color: #aaaaaa;
+  font-weight: bold;
+}
+.footer{
+  width:1440px;
+  text-align: center;
+}
+/* -- 상단 바로가기 */
+footer .go_top{
+  position: relative;
+}
+footer .go_top > a{
+  padding: 3px 6px;
+  border: 3px solid #1c1c1c;
+  display: block;
+  position: absolute;
+  top: -140px; right: 0;
+}
+footer .go_top > a > img{
+  width: 20px;
+}
+/* ▽----▽ 푸터 상단 ▽----▽ */
+/* -- 공통 */
+footer .top{
+  position: relative;
+  margin-bottom: 40px;
+}
+/* -- 로고 */
+footer .top > a{
+  position: absolute;
+  top: 0; left: 0;
+}
+/* -- 센터 */
+footer .center{
+  transform: translateX(-50%);
+  top: 0; left: 50%;
+  position: absolute;
+  font-size:14px;
+}
+footer .center > ul > li{
+  margin: 0 20px;
+  position: relative;
+  display: inline-block;
+}
+footer .center > ul > li:not(:first-child)::before{
+  content: "";
+  display:block;
+  position: absolute;
+  top: 50%; left: -21px;
+  width: 1px; height: 10px;
+  transform: translateY(-50%);
+  background-color: #aaaaaa;
+}
+footer .center > ul > li > a{
+  transition: 0.4s;
+}
+footer .center > ul > li > a:hover{
+  color: #ffffff;
+  transition: 0.2s;
+}
+footer .center > ul > li > a::after{
+  content: "";
+  width: 0; height: 2px;
+  bottom: -4px; left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  background-color: #fff;
+  transition: 0.3s;
+}
+footer .center > ul > li > a:hover::after{
+  transition: 0.2s;
+  width: 100%;
+}
+/* -- 패밀리 사이트, SNS */
+footer .right{
+  position: absolute;
+  top: 0; right: 0;
+}
+/* -- 패밀리 사이트 */
+select{
+  border: 2px solid #707070;
+  text-indent: 8px;
+  margin: 0 auto 16px;
+  padding:6px 0 8px;
+  position: relative;
+  width: 192px;
+  display: block;
+  outline: none;
+  color: #707070;
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: 'Noto Sans KR';
+  font-size: 12px;
+  appearance: none;
+}
+select:hover{
+  transition: 0.1s;
+  font-weight: bold;
+}
+select > option{
+  padding: 20px;
+}
+select > option:first-child{
+  display: none;
+}
+label{
+  padding: 11px 10px 12px 0;
+  z-index: 1;
+  top:0; right: 0;
+  position: absolute;
+  color: #707070;
+}
+/* -- SNS */
+footer .sns{
+  position: relative;
+  height: 24px;
+}
+footer .sns > a{
+  position: absolute;
+}
+footer .sns > a > img{
+  transition: 0.3s;
+  position: absolute;
+  width: 24px;
+}
+footer .sns > a:nth-child(1){
+  left: 3px;
+}
+footer .sns > a:nth-child(2){
+  left: 57px;
+}
+footer .sns > a:nth-child(3){
+  right: 81px;
+}
+footer .sns > a:nth-child(4){
+  right: 27px;
+}
+footer .sns > a > img:last-child{
+  opacity: 0;
+}
+footer .sns > a:hover > img:first-child{
+  opacity: 0;
+}
+footer .sns > a:hover > img:last-child{
+  opacity: 1;
+}
+/* △----△ 푸터 상단 △----△ */
+                                        
+/* ▽----▽ 푸터 하단 ▽----▽ */
+footer .bot li{
+  padding: 0 12px;
+  margin-bottom: 30px;
+  display: inline-block;
+}
+/* △----△ 푸터 하단 △----△ */
+/* △------------△ 푸터 영역 끝 △------------△ */
+}
